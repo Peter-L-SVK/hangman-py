@@ -35,7 +35,7 @@ cd python-hangman
 
 3. Run the game:
 ```bash
-python hangman.py
+python main.py # or ./main.py
 ```
 
 ## Word List Configuration
@@ -92,15 +92,3 @@ Pull requests welcome! For major changes, please open an issue first.
 ## License
 
 [MIT](LICENSE) License
-
-### Recommended Repository Structure:
-
-```
-/hangman/
-│
-├── hangman.py        # Main game code
-├── words.json        # Word list configuration
-├── README.md         # This file
-├── LICENSE           # License file
-└── screenshot.png    # Game screenshot (optional)
-```
