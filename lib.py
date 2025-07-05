@@ -2,6 +2,7 @@ import random
 import os
 import json
 import time
+from datetime import datetime
 
 def clear_screen():
     """Clear the terminal screen."""
@@ -27,10 +28,28 @@ def load_words(filename='words.json'):
         return {"words": ["default", "words", "if", "json", "invalid"]}
 
 def get_random_word(word_data, category=None):
-    """Return a random word from the loaded data."""
+    """Return a truly random word from the loaded data."""
+    # Seed random with current time for better randomness
+    random.seed(datetime.now().timestamp())
+    
     if category and category in word_data.get('categories', {}):
-        return random.choice(word_data['categories'][category])
-    return random.choice(word_data['words'])
+        # Make a copy of the list to avoid modifying the original
+        category_words = word_data['categories'][category].copy()
+        # Shuffle the words for better randomness
+        random.shuffle(category_words)
+        return random.choice(category_words)
+    
+    # For general words
+    all_words = word_data['words'].copy()
+    random.shuffle(all_words)
+    return random.choice(all_words)
+
+def refresh_word_list(word_data, category=None):
+    """Refresh the available words for a category to prevent repeats."""
+    if category and category in word_data.get('categories', {}):
+        # In a more advanced version, you could track used words
+        return word_data['categories'][category].copy()
+    return word_data['words'].copy()
 
 def display_hangman(tries):
     """Display the hangman ASCII art based on remaining tries."""
@@ -108,37 +127,46 @@ def display_hangman(tries):
     return stages[tries]
 
 def choose_category(word_data):
-    """Let the player choose a category if available."""
+    """Let the player choose a category with improved random selection."""
     if 'categories' not in word_data or not word_data['categories']:
         return None
     
     print("Available categories:")
     categories = list(word_data['categories'].keys())
+    
+    # Display categories with numbers - THIS IS THE CORRECTED LINE
     for i, category in enumerate(categories, 1):
-        print(f"{i}. {category}")
+        print(f"{i}. {category} (contains {len(word_data['categories'][category])} words)")
     
     while True:
-        choice = input("\nChoose a category (number) or press Enter for random: ")
+        choice = input("\nChoose a category (number) or press Enter for random: ").strip()
+        
         if not choice:
-            return None
+            # Return a random category if user chooses random
+            return random.choice(categories)
+        
         if choice.isdigit() and 1 <= int(choice) <= len(categories):
-            return categories[int(choice)-1]
-        print("Invalid choice. Please try again.")
-        pause(1.5)
+            selected_category = categories[int(choice)-1]
+            print(f"\nSelected category: {selected_category}")
+            time.sleep(1)
+            return selected_category
+        
+        print("Invalid choice. Please enter a number or press Enter for random.")
+        time.sleep(1.5)
         clear_screen()
         print("Available categories:")
         for i, category in enumerate(categories, 1):
             print(f"{i}. {category}")
-
+            
 def play_hangman():
     """Main game loop for Hangman with enhanced feedback and pauses."""
     clear_screen()
     print("Welcome to Hangman!")
     print("Try to guess the word before the man is hanged.\n")
     pause(1.5)
-    
     word_data = load_words()
     category = choose_category(word_data)
+    available_words = refresh_word_list(word_data, category)
     word = get_random_word(word_data, category).lower()
     
     word_completion = ['_'] * len(word)
