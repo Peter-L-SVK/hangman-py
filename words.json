@@ -1,24 +1,76 @@
 {
     "words": [
-        "python",
-        "hangman",
-        "computer",
-        "keyboard",
-        "programming",
-        "developer",
-        "algorithm",
-        "function",
-        "variable",
-        "dictionary",
-        "terminal",
-        "game",
-        "challenge",
-        "learning",
-        "coding"
+        "python", "javascript", "java", "kotlin", "rust", 
+        "golang", "ruby", "php", "swift", "dart",
+        "computer", "keyboard", "monitor", "motherboard", "processor",
+        "graphics", "memory", "storage", "network", "router",
+        "giraffe", "elephant", "kangaroo", "dolphin", "rhinoceros",
+        "cheetah", "octopus", "peacock", "flamingo", "chameleon",
+        "basketball", "football", "soccer", "tennis", "volleyball",
+        "baseball", "hockey", "cricket", "rugby", "badminton",
+        "pizza", "hamburger", "sushi", "pasta", "taco",
+        "burrito", "ramen", "steak", "salad", "sandwich",
+        "france", "germany", "japan", "brazil", "canada",
+        "australia", "egypt", "italy", "norway", "thailand",
+        "oxygen", "hydrogen", "nitrogen", "carbon", "silicon",
+        "mercury", "uranium", "platinum", "titanium", "potassium",
+        "guitar", "piano", "violin", "trumpet", "saxophone",
+        "drums", "flute", "cello", "clarinet", "harmonica",
+        "avengers", "superman", "batman", "spiderman", "wonderwoman",
+        "transformers", "terminator", "matrix", "inception", "interstellar",
+        "sunflower", "rose", "tulip", "daisy", "orchid",
+        "cactus", "bamboo", "lavender", "lotus", "daffodil",
+        "mountain", "volcano", "canyon", "glacier", "waterfall",
+        "forest", "desert", "tundra", "wetland", "savanna"
     ],
     "categories": {
-        "programming": ["python", "programming", "algorithm", "function", "variable"],
-        "technology": ["computer", "keyboard", "terminal", "developer"],
-        "general": ["game", "challenge", "learning", "dictionary"]
+        "Programming": [
+            "python", "javascript", "java", "kotlin", "rust",
+            "golang", "ruby", "php", "swift", "dart"
+        ],
+        "Computer Hardware": [
+            "computer", "keyboard", "monitor", "motherboard", "processor",
+            "graphics", "memory", "storage", "network", "router"
+        ],
+        "Animals": [
+            "giraffe", "elephant", "kangaroo", "dolphin", "rhinoceros",
+            "cheetah", "octopus", "peacock", "flamingo", "chameleon"
+        ],
+        "Sports": [
+            "basketball", "football", "soccer", "tennis", "volleyball",
+            "baseball", "hockey", "cricket", "rugby", "badminton"
+        ],
+        "Food": [
+            "pizza", "hamburger", "sushi", "pasta", "taco",
+            "burrito", "ramen", "steak", "salad", "sandwich"
+        ],
+        "Countries": [
+            "france", "germany", "japan", "brazil", "canada",
+            "australia", "egypt", "italy", "norway", "thailand"
+        ],
+        "Chemistry": [
+            "oxygen", "hydrogen", "nitrogen", "carbon", "silicon",
+            "mercury", "uranium", "platinum", "titanium", "potassium"
+        ],
+        "Music": [
+            "guitar", "piano", "violin", "trumpet", "saxophone",
+            "drums", "flute", "cello", "clarinet", "harmonica"
+        ],
+        "Movies": [
+            "avengers", "superman", "batman", "spiderman", "wonderwoman",
+            "transformers", "terminator", "matrix", "inception", "interstellar"
+        ],
+        "Plants": [
+            "sunflower", "rose", "tulip", "daisy", "orchid",
+            "cactus", "bamboo", "lavender", "lotus", "daffodil"
+        ],
+        "Geography": [
+            "mountain", "volcano", "canyon", "glacier", "waterfall",
+            "forest", "desert", "tundra", "wetland", "savanna"
+        ],
+        "Mixed": [
+            "python", "giraffe", "pizza", "france", "guitar",
+            "oxygen", "avengers", "sunflower", "mountain", "basketball"
+        ]
     }
 }
