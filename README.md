@@ -90,7 +90,6 @@ Pull requests welcome! For major changes, please open an issue first.
 ## License
 
 [MIT](LICENSE)
-```
 
 ### Recommended Repository Structure:
 
