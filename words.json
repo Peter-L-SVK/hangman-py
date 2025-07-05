@@ -1,0 +1,24 @@
+{
+    "words": [
+        "python",
+        "hangman",
+        "computer",
+        "keyboard",
+        "programming",
+        "developer",
+        "algorithm",
+        "function",
+        "variable",
+        "dictionary",
+        "terminal",
+        "game",
+        "challenge",
+        "learning",
+        "coding"
+    ],
+    "categories": {
+        "programming": ["python", "programming", "algorithm", "function", "variable"],
+        "technology": ["computer", "keyboard", "terminal", "developer"],
+        "general": ["game", "challenge", "learning", "dictionary"]
+    }
+}
