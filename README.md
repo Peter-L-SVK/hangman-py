@@ -78,10 +78,12 @@ Modify these variables in the code:
 
 ## Future Improvements
 
-- [ ] Add difficulty levels
-- [ ] Implement score tracking
-- [ ] Add multiplayer mode
-- [ ] Create graphical version
+✔️ Configurable word lists via JSON  
+✔️ Multiple difficulty levels (by word length)  
+✔️ Guess tracking and attempt counting  
+✔️ Clear terminal interface  
+✔️ Play again option  
+✔️ Category hints system  
 
 ## Contributing
 
@@ -89,7 +91,7 @@ Pull requests welcome! For major changes, please open an issue first.
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) License
 
 ### Recommended Repository Structure:
 
