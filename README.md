@@ -35,7 +35,7 @@ cd python-hangman
 
 3. Run the game:
 ```bash
-python hangman.py
+python main.py # or ./main.py
 ```
 
 ## Word List Configuration
