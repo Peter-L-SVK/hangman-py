@@ -92,15 +92,3 @@ Pull requests welcome! For major changes, please open an issue first.
 ## License
 
 [MIT](LICENSE) License
-
-### Recommended Repository Structure:
-
-```
-/hangman/
-│
-├── hangman.py        # Main game code
-├── words.json        # Word list configuration
-├── README.md         # This file
-├── LICENSE           # License file
-└── screenshot.png    # Game screenshot (optional)
-```
